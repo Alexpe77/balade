@@ -12,9 +12,9 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --font-default: "Bangers", system-ui;
+  --font-default: "Verdana", system-ui;
   --font-primary: "Bangers", system-ui;
-  --font-secondary: "Bangers", system-ui;
+  --font-secondary: sans-serif, system-ui;
 }
 
 /* Colors */
@@ -55,6 +55,11 @@ h5,
 h6 {
   font-family: var(--font-secondary);
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bangers', system-ui;
+}
+
 
 /*--------------------------------------------------------------
 # Sections & Section Header
@@ -895,7 +900,7 @@ section {
 }
 
 .menu .tab-content .menu-item .menu-img {
-  padding: 0 60px;
+  padding: 0 20px;
   margin-bottom: 15px;
 }
 
