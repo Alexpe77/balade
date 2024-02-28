@@ -12,4 +12,6 @@ composer.lock
 composer.json
 symfony.lock
 /config
+.htaccess
+/bin
 ###< symfony/framework-bundle ###

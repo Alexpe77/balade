@@ -1,9 +1,19 @@
 <?php
 
-use App\Kernel;
+// $url = isset($_GET['url']) ? $_GET['url'] : '';
 
-require_once dirname(__DIR__).'/vendor/autoload_runtime.php';
+$request_uri = $_SERVER['REQUEST_URI'];
+$base_url = str_replace("/index.php", "", $_SERVER['PHP_SELF']);
+$route = str_replace($base_url, "", $request_uri);
 
-return function (array $context) {
-    return new Kernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);
-};
+switch ($route) {
+    case '/':
+        include('index.html');
+        break;
+    case '/sponsors':
+        include('sponsors.html');
+        break;
+    default:
+        include('index.html');
+        break;
+}
