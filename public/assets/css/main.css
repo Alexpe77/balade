@@ -11,9 +11,15 @@
 # Learn more about CSS variables at https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 --------------------------------------------------------------*/
 /* Fonts */
+
+@font-face {
+  font-family: 'SupersonicRocketship';
+  src: url('assets/fonts/SupersonicRocketship.ttf') format('truetype');
+}
+
 :root {
   --font-default: "Verdana", system-ui;
-  --font-primary: "Bangers", system-ui;
+  --font-primary: "SupersonicRocketship", system-ui;
   --font-secondary: sans-serif, system-ui;
 }
 
@@ -57,7 +63,7 @@ h6 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Bangers', system-ui;
+  font-family: var(--font-primary);
 }
 
 
@@ -1505,7 +1511,7 @@ section {
   font-weight: 700;
   margin-bottom: 20px;
   color: var(--color-secondary);
-  font-family: "Bangers", system-ui;
+  font-family: var(--font-primary);
 }
 
 .hero h2 span {
